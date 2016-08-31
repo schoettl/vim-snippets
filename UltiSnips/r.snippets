@@ -188,4 +188,10 @@ endsnippet
 # var <- c("#","type","out","individual","words","separated","by","spaces")
 snippet vec
 ${1:var} <- c("${0:${VISUAL:/ /","/g}}")
+
+snippet tt "test_that"
+test_that('${1:what}', {
+    expect_that(${0:sth}, equals(${2:expected}))
+})
+
 endsnippet
