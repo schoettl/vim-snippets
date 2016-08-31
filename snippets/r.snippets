@@ -129,3 +129,9 @@ snippet fte
 	var.test(${1:x}, ${0:y})
 snippet kvt
 	kv.test(${1:x}, ${0:y})
+
+# R unit tests
+snippet testt
+	test_that('${1:what}', {
+	    expect_that(${0:sth}, equals(${2:expected}))
+	})
