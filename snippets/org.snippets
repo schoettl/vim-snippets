@@ -1,3 +1,5 @@
+snippet []
+	- [ ] ${0}
 snippet bsrc
 	#+BEGIN_SRC ${1:lang}
 	${0}
@@ -11,8 +13,48 @@ snippet props
 	:${1:key}: ${2:value}
 	:END:
 snippet header
-	#+TITLE: ${1}
-	#+OPTIONS: toc:nil
-	#+DATE: ${2}
-	#+AUTHOR: ${3}
-	#+EMAIL: ${4}
+	#+TITLE:   ${1}
+	#+OPTIONS: ${2:toc:nil}
+	#+DATE:    ${3}
+	#+AUTHOR:  ${4}
+	#+EMAIL:   ${5}
+snippet propsm
+	:PROPERTIES:
+	:title:       ${1}
+	:subtitle:    ${2}
+	:subsubtitle: ${3}
+	:composer:    ${4}
+	:arranger:    ${5}
+	:poet:        ${6}
+	:dedication:  ${7}
+	:instrument:  ${8}
+	:meter:       ${9}
+	:END:
+snippet volksm
+	<<
+	  \time ${1:3/4}
+	  \relative c'' {
+	    \repeat volta 2 {
+	      \key ${2:c} \major
+	      \partial ${3} ${4}
+	      s2.^\markup{Teil 1}
+	      \repeat unfold 31 { s }
+	    }
+	    \break
+	    \repeat volta 2 {
+	      \key ${5:g} \major
+	      s2.^\markup{Teil 2}
+	      \repeat unfold 15 { s }
+	    }
+	    \break
+	    \repeat volta 2 {
+	      \key ${6:f} \major
+	      s2.^\markup{Teil 3}
+	      \repeat unfold 15 { s }
+	    }
+	  }
+	  \chords {
+	    \partial ${7} s${8}
+		${0}
+	  }
+	>>
