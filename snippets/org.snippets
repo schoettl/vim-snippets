@@ -1,0 +1,18 @@
+snippet bsrc
+	#+BEGIN_SRC ${1:lang}
+	${0}
+	#+END_SRC
+snippet bcomment
+	#+BEGIN_COMMENT
+	${0}
+	#+END_COMMENT
+snippet props
+	:PROPERTIES:
+	:${1:key}: ${2:value}
+	:END:
+snippet header
+	#+TITLE: ${1}
+	#+OPTIONS: toc:nil
+	#+DATE: ${2}
+	#+AUTHOR: ${3}
+	#+EMAIL: ${4}
