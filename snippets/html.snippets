@@ -855,3 +855,11 @@ snippet wbr
 	<wbr>
 snippet viewport
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+# Angular
+# Better place in https://github.com/matthewsimo/angular-vim-snippets/tree/master/snippets/html ?
+snippet     if
+	*ngIf="${1}"
+snippet     if2
+	*ngIf="${1}${2:; then thenBlock}${3:; else elseBlock}"
+snippet     for
+	*ngFor="let ${1:item} of ${2:items}"
