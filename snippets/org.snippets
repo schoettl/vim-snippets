@@ -4,6 +4,10 @@ snippet bsrc
 	#+BEGIN_SRC ${1:lang}
 	${0}
 	#+END_SRC
+snippet bex
+	#+BEGIN_EXAMPLE
+	${0}
+	#+END_EXAMPLE
 snippet bcomment
 	#+BEGIN_COMMENT
 	${0}
@@ -22,7 +26,7 @@ snippet header
 	#+DATE:    ${3}
 	#+AUTHOR:  ${4}
 	#+EMAIL:   ${5}
-snippet propsm
+snippet propsorgly
 	:PROPERTIES:
 	:title:       ${1}
 	:subtitle:    ${2}
@@ -41,20 +45,20 @@ snippet volksm
 	    \repeat volta 2 {
 	      \key ${2:c} \major
 	      \partial ${3} ${4}
-	      s2.^\markup{Teil 1}
-	      \repeat unfold 15 { s }
+	      s2.^"Teil 1"
+	      \repeat uns2.*15
 	    }
 	    \break
 	    \repeat volta 2 {
 	      \key ${5:g} \major
-	      s2.^\markup{Teil 2}
-	      \repeat unfold 15 { s }
+	      s2.^"Teil 2"
+	      \repes2.*15
 	    }
 	    \break
 	    \repeat volta 2 {
 	      \key ${6:f} \major
-	      s2.^\markup{Teil 3}
-	      \repeat unfold 15 { s }
+	      s2.^"Teil 3"
+	      s2.*15
 	    }
 	  }
 	  \chords {
