@@ -1,0 +1,13 @@
+
+# Take name from To-header using vim script (function defined in mail.vim).
+
+snippet sgf
+	Sehr geehrte Frau `FindRecepientsName()['lastName']`,
+snippet sgh
+	Sehr geehrter Herr `FindRecepientsName()['lastName']`,
+snippet hf
+	Hallo Frau `FindRecepientsName()['lastName']`,
+snippet hh
+	Hallo Herr `FindRecepientsName()['lastName']`,
+snippet hd
+	Hallo `FindRecepientsName()['firstName']`,
