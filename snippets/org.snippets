@@ -1,5 +1,11 @@
 snippet []
 	- [ ] ${0}
+snippet +
+	#+${1:WORD}: ${0}
+snippet begin
+	#+BEGIN_${1}
+	${0}
+	#+END_$1
 snippet bsrc
 	#+BEGIN_SRC ${1:lang}
 	${0}
@@ -21,11 +27,17 @@ snippet ::
 snippet prop
 	#+PROPERTY: ${1}
 snippet header
-	#+TITLE:   ${1}
-	#+OPTIONS: ${2:toc:nil}
-	#+DATE:    ${3}
-	#+AUTHOR:  ${4}
+	#+TITLE:   ${1:`expand('%:t:r')`}
+	#+OPTIONS: ${2:toc:nil num:nil timestamp:nil}
+	#+DATE:    ${3:`strftime('%F')`}
+	#+AUTHOR:  ${4:`expand('$USER')`}
 	#+EMAIL:   ${5}
+snippet latexheader
+	#+LATEX_COMPILER: lualatex
+	#+LATEX_CLASS: article
+	#+LATEX_CLASS_OPTIONS: [a4paper,11pt,twoside]
+	#+LATEX_HEADER: \usepackage[parfill]{parskip}
+	#+LATEX_HEADER: \usepackage[a4paper,left=2.5cm,right=2cm,top=2.5cm,bottom=2.5cm]{geometry}
 snippet propsmusicevent
 	:PROPERTIES:
 	:location: ${1}
