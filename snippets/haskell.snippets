@@ -149,3 +149,10 @@ snippet sb
 snippet doc
 	{-| ${0}
 	-}
+# GHC Note https://ro-che.info/articles/2018-05-02-ghc-note-snippet https://gitlab.haskell.org/ghc/ghc/wikis/commentary/coding-style#Commentsinthesourcecode
+snippet note
+	-- See Note [${1:title}]
+	{- Note [$1]
+	   ~~~~~~~${1/./~/g}
+	   ${2:text}
+	-}

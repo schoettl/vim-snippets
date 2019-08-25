@@ -1,0 +1,32 @@
+snippet case
+	$case ${1:variable}
+	  $of ${2:pattern}
+	    $0
+snippet for
+	$forall ${1:variable} <- ${2:list}
+	  $0
+snippet if
+	$if ${1:condition}
+	  ${2:expr1}
+	$else
+	  ${3:expr2}
+snippet ifelse
+	$if ${1:condition}
+	  ${2:expr1}
+	$elseif
+	  ${3:expr2}
+	$else
+	  $0
+snippet maybe
+	$maybe ${1:variable} <- ${2:maybe}
+	  ${3:expr}
+	$nothing
+	  $0
+snippet #
+	#{${1:expr}}
+snippet ^
+	^{${1:widget}}
+snippet @
+	@{${1:NameR}}
+snippet @?
+	@?{(${1:NameR}, [("${2:key}", ${3:value})])}
