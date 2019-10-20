@@ -54,6 +54,18 @@ snippet propsmusicevent
 	:price: ${4}
 	:admission: ${5:frei}
 	:END:
+# Properties for orgevent2* and create-invoice
+# Timestamp and event title must be written in headline
+snippet propsorgevent
+	:PROPERTIES:
+	:location:  ${1}
+	:admission: ${2}
+	:with:      ${3}
+	:url:       ${4}
+	:customer:  ${5}
+	:address:   ${6}
+	:price:     ${7}
+	:END:
 snippet propsorgly
 	:PROPERTIES:
 	:title:       ${1}
